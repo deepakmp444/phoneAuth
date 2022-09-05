@@ -9,7 +9,7 @@ function Signin() {
   const [flag, setFlag] = useState(false);
 
   const navigate = useNavigate();
-  // 8305478705
+
   const getOTP = async (event) => {
     event.preventDefault();
     if (phoneNumber === "" || phoneNumber === undefined) return;
