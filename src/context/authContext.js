@@ -12,6 +12,7 @@ export const phoneAuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [userId, setUserid] = useState("");
 
+    // Verify captcha then OTP comes
   const captcha = (phoneNumber) => {
     const appVerifier = new RecaptchaVerifier(
       "recaptcha-container",
@@ -36,6 +37,7 @@ const AuthProvider = ({ children }) => {
       });
   };
 
+  // Get current user loggedIn
   useEffect(() => {
     const suscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
